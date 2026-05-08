@@ -1,0 +1,350 @@
+<!-- pendaftaran.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-box">
+
+        <div class="logo-box">
+            <img src="icon.png">
+        </div>
+
+        <div class="school-text">
+
+        <a href="aboutme.html"
+        class="about-btn">
+
+            Tentang Kami
+
+        </a>
+
+            <h1>SDN 1 TADIKA MESRA</h1>
+
+            <p>
+                Jalan Kampung Durian Runtuh 4,
+                blok D nomor 7
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- BOX 1 -->
+    <div class="form-box">
+
+        <!-- UPLOAD -->
+        <label class="upload-btn">
+
+            Upload Picture
+
+            <input
+            type="file"
+            id="fotoInput"
+            accept="image/*"
+            hidden>
+
+        </label>
+
+        <!-- NAMA FILE -->
+        <p id="namaFile">
+
+            Belum ada gambar
+
+        </p>
+
+        <!-- HAPUS FOTO -->
+        <button
+        type="button"
+        id="hapusFoto">
+
+            Hapus Gambar
+
+        </button>
+
+        <!-- NAMA -->
+        <div class="input-area">
+
+            <label>Nama :</label>
+
+            <input
+            type="text"
+            id="nama"
+            placeholder="Masukkan nama...">
+
+        </div>
+
+        <!-- TANGGAL -->
+        <div class="input-area">
+
+            <label>
+                Tanggal Lahir (HH/BB/TTTT) :
+            </label>
+
+            <input
+            type="date"
+            id="tanggal">
+
+        </div>
+
+        <!-- GENDER -->
+        <div class="input-area">
+
+            <label>
+                Jenis Kelamin :
+            </label>
+
+            <select id="gender">
+
+                <option value="">
+                    Pilih Gender
+                </option>
+
+                <option value="Laki-laki">
+                    Laki-laki
+                </option>
+
+                <option value="Perempuan">
+                    Perempuan
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <!-- BOX 2 -->
+    <div class="form-box">
+
+        <!-- AYAH -->
+        <div class="input-area">
+
+            <label>Nama Ayah :</label>
+
+            <input
+            type="text"
+            id="ayah"
+            placeholder="Masukkan nama ayahmu...">
+
+        </div>
+
+        <!-- IBU -->
+        <div class="input-area">
+
+            <label>Nama Ibu :</label>
+
+            <input
+            type="text"
+            id="ibu"
+            placeholder="Masukkan nama ibumu...">
+
+        </div>
+
+        <!-- ALAMAT -->
+        <div class="input-area">
+
+            <label>Alamat :</label>
+
+            <input
+            type="text"
+            id="alamat"
+            placeholder="Masukkan alamat mu...">
+
+        </div>
+
+        <!-- SEKOLAH -->
+        <div class="input-area">
+
+            <label>Asal Sekolah :</label>
+
+            <input
+            type="text"
+            id="sekolah"
+            placeholder="Masukkan asal sekolahmu...">
+
+        </div>
+
+        <!-- EKSKUL -->
+        <div class="input-area">
+
+            <label>
+                Ekstrakulikuler yang ingin diikuti :
+            </label>
+
+            <input
+            type="text"
+            id="ekskul"
+            placeholder="Masukkan Ekstrakulikuler pilihanmu...">
+
+        </div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div class="submit-box">
+
+        <p>
+            Sudah yakin?<br>
+            Jika sudah, klik "Kirim"
+        </p>
+
+        <button
+        type="button"
+        id="kirimBtn">
+
+            KIRIM!!!
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+/* FILE */
+const fotoInput =
+document.getElementById("fotoInput");
+
+const namaFile =
+document.getElementById("namaFile");
+
+const hapusFoto =
+document.getElementById("hapusFoto");
+
+/* NAMA FILE */
+fotoInput.addEventListener(
+"change",
+function(){
+
+    const file = this.files[0];
+
+    if(file){
+
+        namaFile.innerText =
+        file.name;
+
+    }
+
+});
+
+/* HAPUS FOTO */
+hapusFoto.addEventListener(
+"click",
+function(){
+
+    fotoInput.value = "";
+
+    namaFile.innerText =
+    "Belum ada gambar";
+
+});
+
+/* SUBMIT */
+document.getElementById("kirimBtn")
+.addEventListener("click", function(){
+
+    const foto =
+    fotoInput.files[0];
+
+    const nama =
+    document.getElementById("nama")
+    .value.trim();
+
+    const tanggal =
+    document.getElementById("tanggal")
+    .value;
+
+    const gender =
+    document.getElementById("gender")
+    .value;
+
+    const ayah =
+    document.getElementById("ayah")
+    .value.trim();
+
+    const ibu =
+    document.getElementById("ibu")
+    .value.trim();
+
+    const alamat =
+    document.getElementById("alamat")
+    .value.trim();
+
+    const sekolah =
+    document.getElementById("sekolah")
+    .value.trim();
+
+    const ekskul =
+    document.getElementById("ekskul")
+    .value.trim();
+
+    /* VALIDASI */
+    if(
+        !foto ||
+        !nama ||
+        !tanggal ||
+        !gender ||
+        !ayah ||
+        !ibu ||
+        !alamat ||
+        !sekolah ||
+        !ekskul
+    ){
+
+        alert(
+        "Isi semua data terlebih dahulu!"
+        );
+
+        return;
+
+    }
+
+    const reader =
+    new FileReader();
+
+    reader.onload = function(e){
+
+        const data = {
+
+            foto:e.target.result,
+
+            nama:nama,
+            tanggal:tanggal,
+            gender:gender,
+            ayah:ayah,
+            ibu:ibu,
+            alamat:alamat,
+            sekolah:sekolah,
+            ekskul:ekskul
+
+        }
+
+        localStorage.setItem(
+            "dataSiswa",
+            JSON.stringify(data)
+        );
+
+        window.location.href =
+        "hasil.html";
+
+    }
+
+    reader.readAsDataURL(foto);
+
+});
+
+</script>
+
+</body>
+</html>
