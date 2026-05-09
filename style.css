@@ -1124,13 +1124,17 @@ textarea{
 
 @media screen and (min-width:768px){
 
-    html{
-
-        zoom:1.15;
-
-    }
-
     body{
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:flex-start;
+
+        padding:30px 0;
+
+        background-size:cover;
 
         overflow-x:hidden;
 
@@ -1138,11 +1142,47 @@ textarea{
 
     .container{
 
-        width:100%;
+        width:650px;
 
-        max-width:500px;
+        max-width:650px;
 
         margin:auto;
+
+    }
+
+    .header-box,
+    .welcome-box,
+    .menu-container,
+    .footer-box,
+    .form-box,
+    .hasil-box,
+    .submit-box{
+
+        width:100%;
+
+    }
+
+    /* NAVBAR */
+
+    .nav-toggle{
+
+    left:
+    calc(50% - 410px);
+
+}
+
+    .sidebar{
+
+        left:-340px;
+
+        width:320px;
+
+    }
+
+    .sidebar.show{
+
+        left:
+        calc(50% - 410px);
 
     }
 
