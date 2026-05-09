@@ -316,6 +316,26 @@ if(!loginData){
 
 }
 
+/* GREETING */
+
+const profileData =
+JSON.parse(
+localStorage.getItem(
+"profileData"
+)) || {};
+
+document
+.getElementById(
+"welcomeText"
+)
+.innerText =
+
+"Halo " +
+
+(profileData.nama || "User") +
+
+", Selamat datang di Website kami!!!!";
+
 /* SIDEBAR */
 
 function openSidebar(){
@@ -358,14 +378,6 @@ function closeSidebar(){
 
 }
 
-/* PROFILE */
-
-const profileData =
-JSON.parse(
-localStorage.getItem(
-"profileData"
-)) || {};
-
 if(profileData.foto){
 
     document
@@ -405,6 +417,5 @@ localStorage.getItem(
 "email@gmail.com";
 
 </script>
-
 </body>
 </html>
