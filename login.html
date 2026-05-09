@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="
+width=device-width,
+initial-scale=1.0
+">
+
+<title>
+Login
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-box">
+
+        <div class="logo-box">
+
+            <img src="icon.png">
+
+        </div>
+
+        <div class="school-text">
+
+            <h1>
+                SDN 1 TADIKA MESRA
+            </h1>
+
+            <p>
+                Jalan Kampung Durian Runtuh 4,
+                blok D nomor 7
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- LOGIN -->
+    <div class="login-box">
+
+        <h1 class="login-title">
+
+            MASUK
+
+        </h1>
+
+        <div class="input-area">
+
+            <label>
+                Nama :
+            </label>
+
+            <input
+            type="text"
+            id="namaUser"
+            placeholder="
+Masukkan nama...
+            ">
+
+        </div>
+
+        <div class="input-area">
+
+            <label>
+                Tanggal Lahir :
+            </label>
+
+            <input
+            type="date"
+            id="tanggalUser">
+
+        </div>
+
+        <div class="input-area">
+
+            <label>
+                Email :
+            </label>
+
+            <input
+            type="email"
+            id="emailUser"
+            placeholder="
+Masukkan alamat email...
+            ">
+
+        </div>
+
+        <button
+        id="loginBtn"
+        class="send-btn">
+
+            KIRIM
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+document
+.getElementById(
+"loginBtn"
+)
+.addEventListener(
+"click",
+()=>{
+
+    const nama =
+    document
+    .getElementById(
+    "namaUser"
+    )
+    .value.trim();
+
+    const tanggal =
+    document
+    .getElementById(
+    "tanggalUser"
+    )
+    .value;
+
+    const email =
+    document
+    .getElementById(
+    "emailUser"
+    )
+    .value.trim();
+
+    if(
+        !nama ||
+        !tanggal ||
+        !email
+    ){
+
+        alert(
+        "Isi semua data!"
+        );
+
+        return;
+
+    }
+
+    localStorage.setItem(
+
+    "loginData",
+
+    JSON.stringify({
+
+        nama,
+        tanggal,
+        email
+
+    })
+
+    );
+
+    window.location.href =
+    "index.html";
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!-- About Me.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta
+name="viewport"
+content="
+width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no
+">
+<title>Tentang Kami</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-box">
+
+        <div class="logo-box">
+            <img src="icon.png">
+        </div>
+
+        <div class="school-text">
+
+            <h1>SDN 1 TADIKA MESRA</h1>
+
+            <p>
+                Jalan Kampung Durian Runtuh 4,
+                blok D nomor 7
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ABOUT -->
+    <div class="hasil-box">
+
+        <div class="inner-card">
+
+            <div class="hasil-item">
+
+                <h3>
+                    Tentang Sekolah
+                </h3>
+
+                <p>
+
+                    SDN 1 Tadika Mesra adalah sekolah
+                    yang berfokus pada pendidikan,
+                    kreativitas, dan pengembangan
+                    karakter siswa sejak dini.
+
+                    <br><br>
+
+                    Kami percaya bahwa setiap anak
+                    memiliki potensi luar biasa yang
+                    harus dibimbing dengan lingkungan
+                    yang nyaman, aman, dan penuh
+                    semangat belajar.
+
+                    <br><br>
+
+                    Dengan dukungan guru yang
+                    berpengalaman serta kegiatan
+                    ekstrakulikuler yang beragam,
+                    sekolah kami berkomitmen untuk
+                    membantu siswa berkembang baik
+                    secara akademik maupun sosial.
+
+                    <br><br>
+
+                    Motto kami:
+
+                    <br><br>
+
+                    <b>
+                        "Belajar, Berkarya,
+                        dan Menjadi Generasi Hebat."
+                    </b>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <!-- OVERLAY -->
+<div
+id="overlay"
+class="overlay"
+onclick="closeSidebar()">
+
+</div>
+
+<!-- TOGGLE -->
+<div
+class="nav-toggle"
+onclick="openSidebar()">
+
+    ☰
+
+</div>
+
+<!-- SIDEBAR -->
+<div
+id="sidebar"
+class="sidebar">
+
+    <!-- PROFILE -->
+    <div class="sidebar-profile">
+
+        <div class="profile-mini">
+
+            <img
+            id="navProfile"
+            src="default.png">
+
+        </div>
+
+        <div class="profile-info">
+
+            <h3 id="navNama">
+
+                Username
+
+            </h3>
+
+            <p id="navStatus">
+
+                Status kelas
+
+            </p>
+
+            <p id="navEmail">
+
+                Email
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- DETAIL -->
+    <button
+    class="detail-btn"
+    onclick="
+    window.location.href=
+    'datadiri.html'
+    ">
+
+        Lihat lebih detail
+
+    </button>
+
+    <!-- MENU -->
+    <div class="sidebar-menu">
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'pengumuman.html'
+        ">
+
+            <img src="Pengumuman.png">
+
+            <span>
+                Pengumuman
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'pendaftaran.html'
+        ">
+
+            <img src="Pendaftaran.png">
+
+            <span>
+                Pendaftaran
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'acara.html'
+        ">
+
+            <img src="Acara.png">
+
+            <span>
+                Acara
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'aboutme.html'
+        ">
+
+            <img src="Tentang.png">
+
+            <span>
+                Pengenalan
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- BUTTON -->
+    <div class="bottom-btn">
+
+        <button
+        class="send-btn"
+        onclick="
+        window.location.href=
+        'index.html'
+        ">
+
+            Kembali
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+/* SIDEBAR */
+
+function openSidebar(){
+
+    document
+    .getElementById(
+    "sidebar"
+    )
+    .classList.add(
+    "show"
+    );
+
+    document
+    .getElementById(
+    "overlay"
+    )
+    .classList.add(
+    "show"
+    );
+
+}
+
+function closeSidebar(){
+
+    document
+    .getElementById(
+    "sidebar"
+    )
+    .classList.remove(
+    "show"
+    );
+
+    document
+    .getElementById(
+    "overlay"
+    )
+    .classList.remove(
+    "show"
+    );
+
+}
+
+/* PROFILE */
+
+const profileData =
+JSON.parse(
+localStorage.getItem(
+"profileData"
+)) || {};
+
+if(profileData.foto){
+
+    document
+    .getElementById(
+    "navProfile"
+    )
+    .src =
+    profileData.foto;
+
+}
+
+document
+.getElementById(
+"navNama"
+)
+.innerText =
+profileData.nama ||
+"Username";
+
+document
+.getElementById(
+"navStatus"
+)
+.innerText =
+profileData.kelas ||
+"Status kelas";
+
+document
+.getElementById(
+"navEmail"
+)
+.innerText =
+JSON.parse(
+localStorage.getItem(
+"loginData"
+))?.email ||
+"email@gmail.com";
+
+</script>
+
+</body>
+</html>

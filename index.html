@@ -1,0 +1,410 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="
+width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no
+">
+
+<title>
+SDN 1 TADIKA MESRA
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-box">
+
+        <div class="logo-box">
+
+            <img src="icon.png">
+
+        </div>
+
+        <div class="school-text">
+
+            <h1>
+                SDN 1 TADIKA MESRA
+            </h1>
+
+            <p>
+                Jalan Kampung Durian Runtuh 4,
+                blok D nomor 7
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- GREETING -->
+    <div class="welcome-box">
+
+        <h2 id="welcomeText">
+
+            Halo..., Selamat datang
+            di Website kami!!!!
+
+        </h2>
+
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-container">
+
+        <!-- PENGUMUMAN -->
+        <div
+        class="menu-item"
+        onclick="
+        window.location.href=
+        'pengumuman.html'
+        ">
+
+            <img
+            src="Pengumuman.png">
+
+            <p>
+                Pengumuman
+            </p>
+
+        </div>
+
+        <!-- PENDAFTARAN -->
+        <div
+        class="menu-item"
+        onclick="
+        window.location.href=
+        'pendaftaran.html'
+        ">
+
+            <img
+            src="Pendaftaran.png">
+
+            <p>
+                Pendaftaran
+            </p>
+
+        </div>
+
+        <!-- ACARA -->
+        <div
+        class="menu-item"
+        onclick="
+        window.location.href=
+        'acara.html'
+        ">
+
+            <img
+            src="Acara.png">
+
+            <p>
+                Acara
+            </p>
+
+        </div>
+
+        <!-- ABOUT -->
+        <div
+        class="menu-item"
+        onclick="
+        window.location.href=
+        'aboutme.html'
+        ">
+
+            <img
+            src="Tentang.png">
+
+            <p>
+                Pengenalan
+            </p>
+
+        </div>
+
+    </div>
+    
+    <!-- OVERLAY -->
+<div
+id="overlay"
+class="overlay"
+onclick="closeSidebar()">
+
+</div>
+
+<!-- TOGGLE -->
+<div
+class="nav-toggle"
+onclick="openSidebar()">
+
+    ☰
+
+</div>
+
+<!-- SIDEBAR -->
+<div
+id="sidebar"
+class="sidebar">
+
+    <!-- PROFILE -->
+    <div class="sidebar-profile">
+
+        <div class="profile-mini">
+
+            <img
+            id="navProfile"
+            src="default.png">
+
+        </div>
+
+        <div class="profile-info">
+
+            <h3 id="navNama">
+
+                Username
+
+            </h3>
+
+            <p id="navStatus">
+
+                Status kelas
+
+            </p>
+
+            <p id="navEmail">
+
+                Email
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- DETAIL -->
+    <button
+    class="detail-btn"
+    onclick="
+    window.location.href=
+    'datadiri.html'
+    ">
+
+        Lihat lebih detail
+
+    </button>
+
+    <!-- MENU -->
+    <div class="sidebar-menu">
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'pengumuman.html'
+        ">
+
+            <img src="Pengumuman.png">
+
+            <span>
+                Pengumuman
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'pendaftaran.html'
+        ">
+
+            <img src="Pendaftaran.png">
+
+            <span>
+                Pendaftaran
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'acara.html'
+        ">
+
+            <img src="Acara.png">
+
+            <span>
+                Acara
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'aboutme.html'
+        ">
+
+            <img src="Tentang.png">
+
+            <span>
+                Pengenalan
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- FOOTER -->
+    <div class="footer-box">
+
+        <p>
+
+            Untuk info lebih lanjut,
+            bisa hubungi kami di :
+
+            <br><br>
+
+            0812-3456-7891
+            (WhatsApp)
+
+            <br><br>
+
+            081224782
+            (Call Center Kami)
+
+            <br><br>
+
+            @sdn1tadikamesra
+            (Instagram)
+
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+const loginData =
+JSON.parse(
+localStorage.getItem(
+"loginData"
+));
+
+if(!loginData){
+
+    window.location.href =
+    "login.html";
+
+}
+
+/* SIDEBAR */
+
+function openSidebar(){
+
+    document
+    .getElementById(
+    "sidebar"
+    )
+    .classList.add(
+    "show"
+    );
+
+    document
+    .getElementById(
+    "overlay"
+    )
+    .classList.add(
+    "show"
+    );
+
+}
+
+function closeSidebar(){
+
+    document
+    .getElementById(
+    "sidebar"
+    )
+    .classList.remove(
+    "show"
+    );
+
+    document
+    .getElementById(
+    "overlay"
+    )
+    .classList.remove(
+    "show"
+    );
+
+}
+
+/* PROFILE */
+
+const profileData =
+JSON.parse(
+localStorage.getItem(
+"profileData"
+)) || {};
+
+if(profileData.foto){
+
+    document
+    .getElementById(
+    "navProfile"
+    )
+    .src =
+    profileData.foto;
+
+}
+
+document
+.getElementById(
+"navNama"
+)
+.innerText =
+profileData.nama ||
+"Username";
+
+document
+.getElementById(
+"navStatus"
+)
+.innerText =
+profileData.kelas ||
+"Status kelas";
+
+document
+.getElementById(
+"navEmail"
+)
+.innerText =
+JSON.parse(
+localStorage.getItem(
+"loginData"
+))?.email ||
+"email@gmail.com";
+
+</script>
+
+</body>
+</html>
