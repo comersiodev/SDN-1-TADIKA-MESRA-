@@ -251,29 +251,49 @@ button{
 
 }
 
-/* Tambahin di style.css */
-
 html,
 body{
 
-    width:100%;
+    margin:0;
+    padding:0;
+
     min-height:100vh;
 
     overflow-x:hidden;
 
-    touch-action:pan-y;
+}
+
+body{
+
+    background-color:#000;
+
+    background-image:url('bg.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    font-family:"DescFont";
+
+    color:white;
+
+    padding:15px;
 
 }
 
-/* Lock portrait feel */
 .container{
 
     width:100%;
+
     max-width:500px;
 
-    min-height:100vh;
+    margin:auto;
 
-} 
+    position:relative;
+
+}
 
 *{
     margin:0;
@@ -354,12 +374,7 @@ body{
 
     top:0;
 
-    left:calc(
-    50% - 250px - 320px
-    );
-
-    transform:
-    translateX(-100%);
+    left:-320px;
 
     width:300px;
 
@@ -373,12 +388,17 @@ body{
 
     transition:.3s;
 
+    z-index:9999;
+
+    padding:20px;
+
+    overflow-y:auto;
+
 }
 
 .sidebar.show{
 
-    transform:
-    translateX(100%);
+    left:0;
 
 }
 
@@ -507,46 +527,6 @@ body{
     font-size:22px;
 
     font-family:"MainFont";
-
-}
-
-/* BODY */
-
-body{
-
-    background-color:#000;
-
-    /* BACKGROUND */
-    background-image:url('bg.jpg');
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-    background-attachment:fixed;
-
-    font-family:"DescFont";
-
-    color:white;
-
-    display:flex;
-    justify-content:center;
-
-    padding:15px;
-
-}
-
-.container{
-
-    width:100%;
-    max-width:500px;
-    min-height:100vh;
-
-    margin:auto;
-
-    position:relative;
 
 }
 
@@ -1126,23 +1106,32 @@ textarea{
 
 }
 
-/* DESKTOP LOCK */
+/* DESKTOP LOCK MOBILE */
 
 @media screen and (min-width:768px){
 
     body{
 
         display:flex;
-        justify-content:center;
-        align-items:flex-start;
 
-        padding:20px;
+        justify-content:center;
+
+        padding:20px 0;
 
     }
 
     .container{
 
         width:500px;
+
+        min-height:100vh;
+
+    }
+
+    .nav-toggle{
+
+        left:
+        calc(50% - 250px);
 
     }
 
