@@ -1,0 +1,691 @@
+<!-- datadiri.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="
+width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no
+">
+
+<title>Data Diri</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-box">
+
+        <div class="logo-box">
+
+            <img src="icon.png">
+
+        </div>
+
+        <div class="school-text">
+
+            <h1>
+                SDN 1 TADIKA MESRA
+            </h1>
+
+            <p>
+                Jalan Kampung Durian Runtuh 4,
+                blok D nomor 7
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- DATA DIRI -->
+    <div class="hasil-box">
+
+        <h2 class="data-title">
+
+            DATA DIRI
+
+        </h2>
+
+        <!-- FOTO -->
+        <div class="profile-wrapper">
+
+            <div class="profile-box">
+
+                <img
+                id="profilePreview"
+                src="default.png">
+
+            </div>
+
+            <label
+            class="upload-profile-btn">
+
+                Upload Picture
+
+                <input
+                type="file"
+                id="profileInput"
+                accept="image/*"
+                hidden>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <!-- BIODATA -->
+    <div class="hasil-box">
+
+        <div class="biodata-box">
+
+            <div class="bio-row">
+
+                <span>
+                    Nama :
+                </span>
+
+                <p id="bioNama">
+                    -
+                </p>
+
+            </div>
+
+<div class="bio-row">
+
+    <span>
+        Usia :
+    </span>
+
+    <div>
+
+        <p id="bioUsia">
+            -
+        </p>
+
+        <small id="bioUsiaDetail">
+
+        </small>
+
+    </div>
+
+</div>
+
+            <div class="bio-row">
+
+                <span>
+                    Tanggal Lahir :
+                </span>
+
+                <p id="bioTanggal">
+                    -
+                </p>
+
+            </div>
+
+            <div class="bio-row">
+
+                <span>
+                    Kelas saat ini :
+                </span>
+
+                <p id="bioKelas">
+                    -
+                </p>
+
+            </div>
+
+            <div class="bio-row">
+
+                <span>
+                    Pelajaran Favorit :
+                </span>
+
+                <p id="bioPelajaran">
+                    -
+                </p>
+
+            </div>
+
+            <div class="bio-row">
+
+                <span>
+                    Hobi :
+                </span>
+
+                <p id="bioHobi">
+                    -
+                </p>
+
+            </div>
+
+            <div class="bio-row">
+
+                <span>
+                    Ekstrakulikuler :
+                </span>
+
+                <p id="bioEkskul">
+                    -
+                </p>
+
+            </div>
+
+            <div class="bio-row">
+
+                <span>
+                    Masuk Tahun ajaran :
+                </span>
+
+                <p id="bioTahun">
+                    -
+                </p>
+
+            </div>
+
+            <!-- BIODATA -->
+            <div class="bio-desc">
+
+                <h3>
+                    Biodata Siswa/siswi :
+                </h3>
+
+                <ul id="bioDesc">
+
+                    <li>-</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <!-- OVERLAY -->
+<div
+id="overlay"
+class="overlay"
+onclick="closeSidebar()">
+
+</div>
+
+<!-- TOGGLE -->
+<div
+class="nav-toggle"
+onclick="openSidebar()">
+
+    ☰
+
+</div>
+
+<!-- SIDEBAR -->
+<div
+id="sidebar"
+class="sidebar">
+
+    <!-- PROFILE -->
+    <div class="sidebar-profile">
+
+        <div class="profile-mini">
+
+            <img
+            id="navProfile"
+            src="default.png">
+
+        </div>
+
+        <div class="profile-info">
+
+            <h3 id="navNama">
+
+                Username
+
+            </h3>
+
+            <p id="navStatus">
+
+                Status kelas
+
+            </p>
+
+            <p id="navEmail">
+
+                Email
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- DETAIL -->
+    <button
+    class="detail-btn"
+    onclick="
+    window.location.href=
+    'datadiri.html'
+    ">
+
+        Lihat lebih detail
+
+    </button>
+
+    <!-- MENU -->
+    <div class="sidebar-menu">
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'pengumuman.html'
+        ">
+
+            <img src="Pengumuman.png">
+
+            <span>
+                Pengumuman
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'pendaftaran.html'
+        ">
+
+            <img src="Pendaftaran.png">
+
+            <span>
+                Pendaftaran
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'acara.html'
+        ">
+
+            <img src="Acara.png">
+
+            <span>
+                Acara
+            </span>
+
+        </div>
+
+        <div
+        class="sidebar-item"
+        onclick="
+        window.location.href=
+        'aboutme.html'
+        ">
+
+            <img src="Tentang.png">
+
+            <span>
+                Pengenalan
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- BUTTON -->
+    <div class="bottom-btn">
+
+        <button
+        class="edit-btn"
+        onclick="
+        window.location.href=
+        'editprofil.html'
+        ">
+
+            EDIT PROFIL
+
+        </button>
+
+        <button
+        class="send-btn"
+        onclick="
+        window.location.href=
+        'index.html'
+        ">
+
+            Kembali
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+/* AMBIL DATA */
+const profileData =
+JSON.parse(
+localStorage.getItem(
+"profileData"
+)) || {};
+
+/* FOTO */
+if(profileData.foto){
+
+    document
+    .getElementById(
+    "profilePreview"
+    )
+    .src =
+    profileData.foto;
+
+}
+
+/* NAMA */
+document
+.getElementById(
+"bioNama"
+)
+.innerText =
+profileData.nama || "-";
+
+/* TANGGAL */
+document
+.getElementById(
+"bioTanggal"
+)
+.innerText =
+profileData.tanggal || "-";
+
+/* AUTO UMUR */
+
+if(profileData.tanggal){
+
+    const lahir =
+    new Date(profileData.tanggal);
+
+    const sekarang =
+    new Date();
+
+    let umur =
+    sekarang.getFullYear() -
+    lahir.getFullYear();
+
+    let bulan =
+    sekarang.getMonth() -
+    lahir.getMonth();
+
+    let hari =
+    sekarang.getDate() -
+    lahir.getDate();
+
+    if(hari < 0){
+
+        bulan--;
+
+        hari += 30;
+
+    }
+
+    if(bulan < 0){
+
+        umur--;
+
+        bulan += 12;
+
+    }
+
+    document
+    .getElementById(
+    "bioUsia"
+    )
+    .innerText =
+    umur + " Tahun";
+
+    document
+    .getElementById(
+    "bioUsiaDetail"
+    )
+    .innerText =
+
+    umur + " Tahun " +
+
+    bulan + " Bulan " +
+
+    hari + " Hari";
+
+}else{
+
+    document
+    .getElementById(
+    "bioUsia"
+    )
+    .innerText = "-";
+
+}
+
+/* DATA */
+document
+.getElementById(
+"bioKelas"
+)
+.innerText =
+profileData.kelas || "-";
+
+document
+.getElementById(
+"bioPelajaran"
+)
+.innerText =
+profileData.pelajaran || "-";
+
+document
+.getElementById(
+"bioHobi"
+)
+.innerText =
+profileData.hobi || "-";
+
+document
+.getElementById(
+"bioEkskul"
+)
+.innerText =
+profileData.ekskul || "-";
+
+document
+.getElementById(
+"bioTahun"
+)
+.innerText =
+profileData.tahun || "-";
+
+/* BIODATA */
+const bioDesc =
+document.getElementById(
+"bioDesc"
+);
+
+bioDesc.innerHTML = "";
+
+if(
+profileData.desc &&
+profileData.desc.length > 0
+){
+
+    profileData.desc.forEach(
+    item => {
+
+        const li =
+        document.createElement(
+        "li"
+        );
+
+        li.innerText = item;
+
+        bioDesc.appendChild(li);
+
+    });
+
+}else{
+
+    bioDesc.innerHTML =
+    "<li>-</li>";
+
+}
+
+/* FOTO UPDATE */
+document
+.getElementById(
+"profileInput"
+)
+.addEventListener(
+"change",
+function(){
+
+    const file =
+    this.files[0];
+
+    if(file){
+
+        const reader =
+        new FileReader();
+
+        reader.onload =
+        function(e){
+
+            document
+            .getElementById(
+            "profilePreview"
+            )
+            .src =
+            e.target.result;
+
+            profileData.foto =
+            e.target.result;
+
+            localStorage.setItem(
+
+            "profileData",
+
+            JSON.stringify(
+            profileData
+            )
+
+            );
+
+        };
+
+        reader.readAsDataURL(
+        file
+        );
+
+    }
+
+});
+
+/* SIDEBAR */
+
+function openSidebar(){
+
+    document
+    .getElementById(
+    "sidebar"
+    )
+    .classList.add(
+    "show"
+    );
+
+    document
+    .getElementById(
+    "overlay"
+    )
+    .classList.add(
+    "show"
+    );
+
+}
+
+function closeSidebar(){
+
+    document
+    .getElementById(
+    "sidebar"
+    )
+    .classList.remove(
+    "show"
+    );
+
+    document
+    .getElementById(
+    "overlay"
+    )
+    .classList.remove(
+    "show"
+    );
+
+}
+
+/* NAV PROFILE */
+
+if(profileData.foto){
+
+    document
+    .getElementById(
+    "navProfile"
+    )
+    .src =
+    profileData.foto;
+
+}
+
+document
+.getElementById(
+"navNama"
+)
+.innerText =
+profileData.nama ||
+"Username";
+
+document
+.getElementById(
+"navStatus"
+)
+.innerText =
+profileData.kelas ||
+"Status kelas";
+
+document
+.getElementById(
+"navEmail"
+)
+.innerText =
+JSON.parse(
+localStorage.getItem(
+"loginData"
+))?.email ||
+"email@gmail.com";
+
+</script>
+
+</body>
+</html>

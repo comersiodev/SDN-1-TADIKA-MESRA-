@@ -20,6 +20,20 @@
 
 }
 
+#bioUsiaDetail{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:13px;
+
+    color:#ececec;
+
+    font-family:"DescFont";
+
+}
+
 .school-text h1{
 
     font-family:"MainFont";
@@ -1112,7 +1126,7 @@ textarea{
 
     html{
 
-        zoom:1.55;
+        zoom:1.15;
 
     }
 
